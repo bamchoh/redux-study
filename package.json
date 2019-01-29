@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.0"
   }
 }
