@@ -1,9 +1,9 @@
-import React from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import addTodo from '../actions'
 
-const AddTodo = ({ dispatch }) => {
-  let input
+const AddTodo = ({dispatch} : {dispatch:any}) => {
+  var input:any
 
   return (
     <div>
