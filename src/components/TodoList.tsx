@@ -1,13 +1,13 @@
-import React from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state:any) => ({
   todos: state.todos
 })
 
-const TodoList = ({todos}) => (
+const TodoList = ({todos} : {todos:any}) => (
   <ul>
-    {todos.map(todo =>
+    {todos.map((todo:any) =>
       <li key={todo.id}>
         {todo.text}
       </li>
