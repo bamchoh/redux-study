@@ -1,4 +1,12 @@
-const todos = (state:any = [], action:any) => {
+import { TodoAction } from '../actions'
+
+export interface TodoState {
+	id:number;
+	text:string;
+	completed:boolean;
+}
+
+const todos = (state:TodoState[] = [], action:TodoAction) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [
