@@ -1,13 +1,15 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
+import { TodoState } from '../reducers/todos'
+import { CombineState } from '../reducers'
 
-const mapStateToProps = (state:any) => ({
+const mapStateToProps = (state:CombineState) => ({
   todos: state.todos
 })
 
-const TodoList = ({todos} : {todos:any}) => (
+const TodoList = ({todos} : {todos:TodoState[]}) => (
   <ul>
-    {todos.map((todo:any) =>
+    {todos.map((todo:TodoState) =>
       <li key={todo.id}>
         {todo.text}
       </li>
